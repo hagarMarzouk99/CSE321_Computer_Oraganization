@@ -1,5 +1,3 @@
-# Task 1: Iterative Fibonacci Function (Corrected)
-
 .data
 prompt: .asciiz "Enter a number: "
 result_msg: .asciiz "Fibonacci = "
@@ -18,7 +16,7 @@ main:
 
     jal fibonacci     # compute fib(n)
 
-    move $t4, $v0     # save result in t4 !!
+    move $t4, $v0     # save result in t4  
 
     # print message
     li $v0, 4
@@ -34,12 +32,7 @@ main:
     li $v0, 10
     syscall
 
-
-# -------------------------------------------------
-# fibonacci(n): iterative
-# input: $a0
-# output: $v0
-# -------------------------------------------------
+#============================
 fibonacci:
     addi $sp, $sp, -8
     sw $ra, 4($sp)
